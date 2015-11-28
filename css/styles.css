@@ -1,0 +1,145 @@
+/* Example 21-13: styles.css */
+
+* {
+    font-family: verdana,sans-serif;
+    font-size: 14pt;
+}
+
+body {
+
+}
+
+html {
+    background: #fff
+}
+
+img {
+    border: 1px solid black;
+    margin-right: 15px;
+	 -moz-box-shadow: 2px 2px 2px #888;
+	 -webkit-box-shadow: 2px 2px 2px #888;
+	 box-shadow: 2px 2px 2px #888;
+}
+
+.menu li a,
+.button {
+    text-decoration: none;
+    color: #444;
+}
+
+li a {
+    text-decoration: none;
+}
+ 
+.appname {
+    text-align: center;
+    background: #444;
+    color: #ddd;
+    font-family: helvetica;
+    font-size: 20pt;
+    padding: 4px;
+}
+
+
+hr {
+    border-top: 1px solid #ccc !important;
+}
+.display-flex {
+    display: flex;
+    justify-content: space-around;
+}
+.menu {
+    display: inline-block;
+    margin: 10px auto;
+}
+
+.main img {
+    margin: auto;
+    max-width: 300px;
+}
+.like-nope {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+}
+.user-link {
+    padding: 8px;
+}
+.counter {
+    display: none;
+}
+#count-0 {
+    display: block;
+}
+.user-wrap {
+    text-align: center;
+    padding-top: 16px;
+}
+.user-wrap a {
+    margin: 8px;
+}
+.user-wrap:last-child {
+    border-bottom: none;
+}
+.main {
+    max-width: 1000px;
+    margin: auto;
+   padding: 20px;
+    background-color: #eee;
+    overflow: hidden;
+}
+
+.info {
+    background: lightgreen;
+    color: blue;
+	 border: 1px solid green;
+	 padding: 5px 10px;
+    margin-left: 40px;
+}
+
+.menu li,
+.button {
+    display: inline;
+    float: left;
+/*    padding: 4px 6px;
+    border: 1px solid #777; */
+    background: #ddd;
+	 color: #444;
+    margin-right: 8px;
+	 border-radius: 5px;
+/*	 -moz-box-shadow: 2px 2px 2px #888;
+	 -webkit-box-shadow: 2px 2px 2px #888;
+	 box-shadow: 2px 2px 2px #888; */
+}
+
+.menu li a,
+.button {
+    display:block;
+    padding: 4px 6px;
+}
+
+.menu li:hover {
+    background: lightseagreen;
+}
+
+.menu li a:hover {
+    color: white;
+}
+
+.subhead {
+    font-weight: bold;
+}
+
+.taken,
+.error {
+    color: red;
+}
+
+.available {
+    color: green;
+}
+
+.whisper {
+    font-style: italic;
+    color: #006600;
+}
