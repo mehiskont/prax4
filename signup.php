@@ -135,7 +135,7 @@ _END;
 ?>
 
 
-    <input type='submit' value='Sign up'>
+    <input class="btn btn-default" type='submit' value='Sign up'>
 </form>
 </div>
 </div>  <!-- footer -->

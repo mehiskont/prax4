@@ -8,7 +8,7 @@ if (isset($_POST['user'])) {
     $pass   = sanitizeString($_POST['pass']);
 
     if ($user == "" || $pass == "") {
-        $error = "Not all fields were entered<br>";
+        $error = "<span class='error'>Not all fields were entered<br></span>";
     }
     else {
         $query  = "SELECT user,pass FROM members WHERE user='$user'";
@@ -33,10 +33,15 @@ if (isset($_POST['user'])) {
 
 echo <<<_END
 <form method='post' action='login.php'>$error
-<span class='fieldname'>Username</span><input type='text'
-    maxlength='16' name='user' value='$user' autofocus><br>
-<span class='fieldname'>Password</span><input type='password'
-    maxlength='16' name='pass' value='$pass'>
+
+    <div class="form-group">
+        <label class='fieldname'>Username</label>
+        <input class="form-control" type='text' maxlength='16' name='user' value='$user' autofocus><br>
+    </div>
+     <div class="form-group">
+        <label class='fieldname'>Password</label>
+        <input class="form-control" type='password'maxlength='16' name='pass' value='$pass'>
+    </div>
 
 <script>
 // Hide "you must be logged in..." message
@@ -47,7 +52,7 @@ _END;
 
 <br>
 <span class='fieldname'>&nbsp;</span>
-<input type='submit' value='Login'>
+<input class="btn btn-default" type='submit' value='Login'>
 </form><br>
 </div>
 </div>  <!-- footer -->
