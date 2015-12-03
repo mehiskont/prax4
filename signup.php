@@ -1,6 +1,6 @@
 <?php // signup.php
 include_once 'header.php';
-
+/*
 echo <<<_END
 <script>
 // Hide "you must be logged in..." message
@@ -45,6 +45,8 @@ function ajaxRequest() {
 <div class='main'><h3 id="signup">Please enter your details to sign up</h3>
 _END;
 
+*/
+
 $error = $user = $pass = $pass2 = $token = $email = $bio = $gender = $name = "";
 
 
@@ -77,10 +79,11 @@ if (isset($_POST['user'])) {
         else {
             include_once 'file_upload.php';
             $avatar_id = $new_file_name;
-
-            queryMysql("INSERT INTO members VALUES('$user', '$token', '$name', '$email', '$gender', '$avatar_id','$bio' )");
-            echo "<script> $('#signup').hide(); </script>";
-            die("<h4>Account created</h4>Please <a href='login.php'>Log in</a>.<br><br>");
+            if ($uploadOk == 1) {
+                queryMysql("INSERT INTO members VALUES('$user', '$token', '$name', '$email', '$gender', '$avatar_id','$bio' )");
+                echo "<script> $('#signup').hide(); </script>";
+                die("<h4>Account created</h4>Please <a href='login.php'>Log in</a>.<br><br>");
+            }
         }
     }
 }
@@ -90,7 +93,7 @@ if (isset($_POST['user'])) {
 
 
 echo <<<_END
-
+<div class="main">
 <form method='post' action='signup.php' enctype='multipart/form-data'>
     $error
     <div class="form-group">

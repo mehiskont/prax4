@@ -1,6 +1,6 @@
 <?php // header.php
 session_start();
-echo "<!DOCTYPE html>\n<html><head><script src='js/OSC.js'></script>";
+echo "<!DOCTYPE html>\n<html><head>";
 
 include 'functions.php';
 

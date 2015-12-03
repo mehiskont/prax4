@@ -36,11 +36,11 @@ echo <<<_END
 
     <div class="form-group">
         <label class='fieldname'>Username</label>
-        <input class="form-control" type='text' maxlength='16' name='user' value='$user' autofocus><br>
+        <input class="form-control" type='text' maxlength='30' name='user' value='$user' autofocus><br>
     </div>
      <div class="form-group">
         <label class='fieldname'>Password</label>
-        <input class="form-control" type='password'maxlength='16' name='pass' value='$pass'>
+        <input class="form-control" type='password'maxlength='30' name='pass' value='$pass'>
     </div>
 
 <script>
